@@ -1,0 +1,60 @@
+{
+    "Header": {
+       "searchField": "Search...",
+       "searchButton": "Search",
+       "cartDrawer": {
+          "emptyCart": "Your cart is empty",
+          "cart": "Your cart",
+          "buy": "Proceed to checkout"
+       },
+       "DrawerHome": "Home"
+    },
+    "Goods": {
+       "mainCharacteristics": "Main Characteristics",
+       "buyButton":"Add to cart",
+       "buyButtonInCart":"In cart",
+       "available":"Available",
+       "notAvailable":"Not available",
+       "RecentViewed":"Recent view",
+       "currency": "$"
+    },
+    "Category": {
+       "zeroGoods": "No items found in this category"
+    },
+    "Admin":{
+       "goods": "Goods",
+       "shelves": "Shelves",
+       "banner": "Banner",
+       "currentShelves": "Current shelves",
+       "addShelf": "Add shelf",
+       "selectGoods": "Select goods",
+       "editGoods": "Edit goods",
+       "addGoods": "Add goods",
+       "addVariantGoods": "Add variant goods",
+       "getGoods": "Edit",
+       "categories": "Categories",
+       "addCategory": "Add category",
+       "changeCategory": "Change category",
+       "goodsModal": {
+          "goodsName": "Goods Name",
+          "goodsDescription": "Goods Description",
+          "goodsPrice": "Price",
+          "buttonSubmitAdd": "Create goods",
+          "buttonSubmitChange": "Change goods",
+          "goodsCategory": "Category and Image",
+          "goodsCategoryName": "Category",
+          "goodsUploadImage": "Upload image",
+          "goodsCharacteristics": "Goods Characteristics",
+          "en": "English",
+          "ua": "Ukrainian"
+       },
+       "categoryModal": {
+          "categoryName": "Category Name",
+          "buttonSubmitAdd": "Create category",
+          "buttonSubmitChange": "Change category",
+          "isOnBar": "Add to main site menu?",
+          "en": "English",
+          "ua": "Ukrainian"
+       }
+    }
+ }

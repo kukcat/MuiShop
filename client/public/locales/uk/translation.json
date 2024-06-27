@@ -1,0 +1,61 @@
+{
+   "Header": {
+      "searchField": "Пошук...",
+      "searchButton": "Знайти",
+      "cartDrawer": {
+         "emptyCart": "Ваш кошик порожній",
+         "cart": "Ваш кошик",
+         "buy": "Перейти до оплати"
+      },
+      "DrawerHome": "На головну"
+   },
+   "Goods": {
+      "mainCharacteristics": "Основні характеристики",
+      "buyButton":"В кошик",
+      "buyButtonInCart":"В кошику",
+      "available":"Є в наявності",
+      "notAvailable":"Нема в наявності",
+      "RecentViewed":"Також ви переглядали",
+      "currency": "₴"
+   },
+   "Category": {
+      "zeroGoods": "Не знайдено товарів даної категорії",
+      "goodsInCategory": "Товари в категорії"
+   },
+   "Admin":{
+      "goods": "Товари",
+      "shelves": "Полиці",
+      "banner": "Банер",
+      "currentShelves": "Поточні полиці",
+      "addShelf": "Додати полицю",
+      "selectGoods": "Оберіть товар",
+      "editGoods": "Редагувати товар",
+      "addGoods": "Додати товар",
+      "addVariantGoods": "Додати товар на основі іншого товару",
+      "getGoods": "Редагувати",
+      "categories": "Категорії",
+      "addCategory": "Додати категорію",
+      "changeCategory": "Змінити категорію",
+      "goodsModal": {
+         "goodsName": "Назва товару",
+         "goodsDescription": "Опис товару",
+         "goodsPrice": "Ціна",
+         "buttonSubmitAdd": "Створити товар",
+         "buttonSubmitChange": "Змінити товар",
+         "goodsCategory": "Категорія та зображення",
+         "goodsCategoryName": "Категорія",
+         "goodsUploadImage": "Завантажити зображення",
+         "goodsCharacteristics": "Характеристики товару",
+         "en": "Англійська",
+         "ua": "Українська"
+      },
+      "categoryModal": {
+         "categoryName": "Назва категорії",
+         "buttonSubmitAdd": "Створити категорію",
+         "buttonSubmitChange": "Змінити категорію",
+         "isOnBar": "Чи додавати категорію на головне меню сайту?",
+         "en": "Англійська",
+         "ua": "Українська"
+      }
+   }
+}

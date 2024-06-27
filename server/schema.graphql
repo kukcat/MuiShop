@@ -1,0 +1,124 @@
+type Goods {
+  id: Int!
+  category: Category!
+  categoryID: Int!
+  name: String!
+  name_En: String!
+  name_Ua: String!
+  description: String!
+  description_En: String!
+  description_Ua: String!
+  price: String!
+  price_En: String!
+  price_Ua: String!
+  sale: Int!
+  photo: String!
+  createDateTime: DateTime!
+  count: Int!
+  isShown: Boolean!
+  goodsUrlName: String!
+  goodsCharacteristic: [GoodsCharacteristic]
+}
+
+type GoodsCharacteristic {
+  id: Int
+  characteristicId: Int
+  name: String
+  name_En: String
+  name_Ua: String
+  value: String
+  value_En: String
+  value_Ua: String
+}
+
+type Characteristic {
+  id: Int
+  name: String
+  name_En: String
+  name_Ua: String
+}
+
+type Category {
+  id: Int!
+  name: String!
+  name_En: String!
+  name_Ua: String!
+  isOnBar: Boolean
+  url: String
+}
+
+type Shelf {
+  id: Int!
+  name: String!
+  name_En: String!
+  name_Ua: String!
+  goods: String
+}
+
+type Query {
+  getGoodsByCategory(category: Int!, skip: Int, take: Int): GoodsPage
+  getGoodsByCategoryName(categoryName: String!, skip: Int, take: Int): GoodsPage
+  getGoodsById(id: Int!): Goods
+  getGoodsByIds(ids: [Int]!): [Goods]
+  getGoodsByUrl(url: String!): Goods
+  getGoodsByName(name: String!, skip: Int, take: Int): GoodsPage
+  getAllGoods(skip: Int, take: Int): GoodsPage
+  getBarCategory: [Category]
+  getCategories: [Category]
+  getShelves: [Shelf]
+  getCharacteristic: [Characteristic]
+}
+
+type GoodsPage {
+  goods: [Goods]
+  count: Int
+}
+
+type Mutation {
+  addGoods(data: AddGoodsInput!, img: Upload, chars: [GoodsInputChars]): String!
+  updateGoods(data: updateGoodsInput!, img: Upload, chars: [updateGoodsInputChars]): String!
+  addShelf(name_En: String!, name_Ua: String!, goods: String!): String!
+  addCategory(name_En: String!, name_Ua: String!, isOnBar: Boolean!): String!
+}
+
+input AddGoodsInput {
+  category: Int!
+  name_En: String!
+  name_Ua: String!
+  description_En: String!
+  description_Ua: String!
+  price_En: String!
+  price_Ua: String!
+  sale: Int!
+  count: Int!
+}
+
+input updateGoodsInput  {
+  id: Int!
+  category: Int
+  name_En: String
+  name_Ua: String
+  description_En: String
+  description_Ua: String
+  price_En: String
+  price_Ua: String
+  sale: Int
+  count: Int
+}
+
+input GoodsInputChars {
+  characteristicId: Int!
+  value_En: String!
+  value_Ua: String!
+}
+
+input updateGoodsInputChars {
+  id: Int!
+  characteristicId: Int!
+  value_En: String!
+  value_Ua: String!
+}
+
+
+scalar Upload
+scalar DateTime

@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+model Goods {
+  id                    Int   @id @default(autoincrement())
+  category              Category  @relation(fields: [categoryID], references: [id])
+  categoryID            Int
+  name_En               String  
+  name_Ua               String  
+  description_En        String
+  description_Ua        String
+  price_En              String
+  price_Ua              String
+  sale                  Int
+  photo                 String
+  createDateTime        DateTime  @default(now())
+  count                 Int       @default(0)
+  goodsCharacteristic   GoodsCharacteristic[]
+  isShown               Boolean @default(true)
+  goodsUrlName          String @default("")
+}
+
+model GoodsCharacteristic {
+  id                Int @id @default(autoincrement())
+  characteristic    Characteristic @relation(fields: [characteristicId], references: [id])
+  characteristicId  Int
+  goods             Goods @relation(fields: [goodsId], references: [id]) 
+  goodsId           Int
+  value_En          String
+  value_Ua          String
+}
+
+model Characteristic {
+  id                    Int @id @default(autoincrement())
+  name_En               String
+  name_Ua               String
+  goodsCharacteristic   GoodsCharacteristic[]
+}
+
+model Category {
+  id        Int @id @default(autoincrement())
+  name_En   String
+  name_Ua   String
+  isOnBar   Boolean 
+  url       String? @default("")
+  goods     Goods[]
+}
+
+model Shelf {
+  id        Int  @id @default(autoincrement())
+  name_En   String
+  name_Ua   String
+  goods     String 
+}

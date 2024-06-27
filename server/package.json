@@ -1,0 +1,39 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node-esm src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "generate": "graphql-codegen",
+    "compile": "npm run generate",
+    "clean": "tsc --build --clean"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "@prisma/client": "^5.14.0",
+    "apollo-server-express": "^3.13.0",
+    "graphql": "^16.8.1",
+    "graphql-scalars": "^1.23.0",
+    "graphql-upload": "^16.0.2",
+    "prisma": "^5.14.0",
+    "ts-node": "^10.9.2",
+    "webp-converter": "^2.3.3"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "4.2.5",
+    "@graphql-codegen/introspection": "4.0.3",
+    "@graphql-codegen/typescript": "^4.0.6",
+    "@graphql-codegen/typescript-resolvers": "^4.0.6",
+    "@types/graphql-upload": "^16.0.7",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
